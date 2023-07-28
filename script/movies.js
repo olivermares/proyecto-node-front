@@ -1,5 +1,4 @@
 function insertMovie() {
-    console.log("event")
   document
     .getElementById("fmovie")
     .addEventListener("submit", function (event) {
@@ -10,6 +9,7 @@ function insertMovie() {
         title: formData.get("title"),
         country: formData.get("country"),
         img: formData.get("img"),
+        id_director:formData.get("director") 
       };
 
       fetch("http://localhost:5000/Movies", {
